@@ -139,10 +139,11 @@ public class MainActivity extends FragmentActivity {
 				isCurrent=true;
 			}else{
 				isCurrent=false;
-
-
 			}
+		}else{
+			isCurrent=false;
 		}
+		Log.d("hyl", id+"onResume: "+currentId);
 		currentId=id;
 	}
 }

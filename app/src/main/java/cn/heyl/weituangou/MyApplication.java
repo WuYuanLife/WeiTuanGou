@@ -96,7 +96,7 @@ public class MyApplication extends Application {
 				latelyCities = (List<City>) ois.readObject();
 				ois.close();
 			}
-			isHaveRecently = (latelyCities != null);
+			isHaveRecently = !(latelyCities == null||latelyCities.size()<=0);
 			if (isHaveRecently)
 				setCurrentCity(latelyCities.get(0));
 			return latelyCities;

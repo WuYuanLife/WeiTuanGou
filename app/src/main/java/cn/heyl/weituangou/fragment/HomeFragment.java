@@ -241,7 +241,7 @@ public class HomeFragment extends Fragment implements IHomeFram,
     @Override
     public void onResume() {
         super.onResume();
-        Log.i("hyl", "onResume()");
+//        Log.i("hyl", "onResume()");
 //		if(weatherResp!=null)
 //		Log.i("hyl", "onResume()"+weatherResp+weatherResp.hashCode());
 //		weatherResp=null;

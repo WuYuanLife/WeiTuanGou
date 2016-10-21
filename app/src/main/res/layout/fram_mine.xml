@@ -44,7 +44,7 @@
         android:layout_height="100dp"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/touxiang" />
+        android:src="@drawable/a011" />
     <TextView
         android:id="@+id/tvName_mine"
         android:layout_width="match_parent"
