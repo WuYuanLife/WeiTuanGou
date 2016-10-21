@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent" >
+<ImageView
+        android:id="@+id/iv1Love_list_home"
+        android:layout_width="120dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/iv2Love_list_home"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/groupon_ic_free_appoint" />
+
+    <TextView
+        android:id="@+id/tvNameLove_list_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv1Love_list_home"
+        android:layout_toRightOf="@+id/iv1Love_list_home"
+        android:text="肯德基" />
+
+    <TextView
+        android:id="@+id/tvDescriptionLove_list_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvPriceLove_list_home"
+        android:layout_below="@+id/tvNameLove_list_home"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/iv1Love_list_home"
+        android:text="以下蛋糕2选1！仅限自提，需预约！"
+        android:textColor="#777"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvPriceLove_list_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv1Love_list_home"
+        android:layout_toRightOf="@+id/iv1Love_list_home"
+        android:text="￥ 100.00"
+        android:textColor="#f36"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvSaleLove_list_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPriceLove_list_home"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:text="已售122"
+        android:textColor="#777"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:id="@+id/tvScoreLove_list_home"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5分"
+        android:textColor="#f81"
+        android:textSize="12sp" />
+
+</RelativeLayout>

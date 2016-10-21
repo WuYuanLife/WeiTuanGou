@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity" >
+
+    
+
+    <cn.heyl.weituangou.ui.MyViewPager
+        android:id="@+id/viewPager_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#888" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioHome"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_main_home"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:text="首 页"
+            android:textColor="@drawable/selector_main_text_color" />
+
+        <RadioButton
+            android:drawableTop="@drawable/selector_main_nearby"
+            android:id="@+id/radioNearby"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:text="附 近"
+            android:textColor="@drawable/selector_main_text_color" />
+
+        <RadioButton
+            android:id="@+id/radioMine"
+            android:layout_width="wrap_content"
+            android:drawableTop="@drawable/selector_main_mine"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:text="我 的"
+            android:textColor="@drawable/selector_main_text_color" />
+    </RadioGroup>
+
+</LinearLayout>

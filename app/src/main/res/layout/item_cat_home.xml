@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="70dp"
+    android:layout_height="50dp">
+    <ImageView
+        android:id="@+id/ivCat_home_list"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:id="@+id/tvEmpty_home_list"
+        android:layout_width="match_parent"
+        android:layout_below="@id/ivCat_home_list"
+        android:text="   "
+        android:layout_height="20dp" />
+    <TextView
+        android:id="@+id/tvCat_hoem_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvEmpty_home_list"
+        android:visibility="visible"
+        android:layout_marginTop="5dp"/>
+    
+    
+</RelativeLayout>

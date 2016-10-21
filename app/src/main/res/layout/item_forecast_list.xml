@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/tv_riqi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:gravity="center_horizontal"
+        android:padding="2dp"
+        android:text="23日"
+        android:textColor="#666"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_xingqi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tv_riqi"
+        android:gravity="center_horizontal"
+        android:padding="2dp"
+        android:text="星期三"
+        android:textColor="#666"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/viewForecast"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_xingqi"
+        android:background="#ddd" />
+
+    <RelativeLayout
+        android:id="@+id/rlday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewForecast"
+        android:layout_toLeftOf="@+id/viewZ" >
+
+        <TextView
+            android:id="@+id/tv_type_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="白天："
+            android:textColor="#333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/tv_type_day"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:textColor="#333"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewZ"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/rlday"
+        android:layout_centerHorizontal="true"
+        android:background="#ddd"
+        android:gravity="center_horizontal"
+        android:padding="2dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewForecast"
+        android:layout_toRightOf="@+id/viewZ" >
+
+        <TextView
+            android:id="@+id/tv_type_night"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="夜晚："
+            android:textColor="#333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_low"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_type_night"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:textColor="#333"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_item_fengxiang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/viewZ"
+        android:gravity="center_horizontal"
+        android:padding="2dp"
+        android:text="东南风"
+        android:textColor="#555"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_fengli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_item_fengxiang"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="2dp"
+        android:padding="2dp"
+        android:text="3级"
+        android:textColor="#555"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/viewB"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/viewZ"
+        android:background="#ddd" />
+
+</RelativeLayout>

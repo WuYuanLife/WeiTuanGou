@@ -1,0 +1,231 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.CityActivity" >
+
+    <RelativeLayout
+        android:id="@+id/llTitle_city"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#eefa3957"
+        android:padding="6dp" >
+
+        <TextView
+            android:id="@+id/tvReturn_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv1_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="请选择城市"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp" >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_alignLeft="@+id/imageView1"
+            android:layout_alignRight="@+id/etSearch_city"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/second_category_button_pressed" />
+
+        <EditText
+            android:id="@+id/etSearch_city"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageView1"
+            android:background="@null"
+            android:hint="城市名称/拼音"
+            android:textColor="#333"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:scaleType="center"
+            android:src="@drawable/cityselect_search_icon" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sl_city"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fafafa" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rlRecently_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="16dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvTitleRecently_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:gravity="center_vertical"
+                    android:text="最近访问的城市"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toLeftOf="@+id/tvClear_city"
+                    android:layout_toRightOf="@+id/tvTitleRecently_city"
+                    android:background="#ccc" />
+
+                <TextView
+                    android:id="@+id/tvClear_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:text="清除"
+                    android:textSize="14sp" />
+
+                <cn.heyl.weituangou.ui.MyGridView
+                    android:id="@+id/gvRecently_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitleRecently_city"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="16dp" >
+
+                <TextView
+                    android:id="@+id/tvTitleHot_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:gravity="center_vertical"
+                    android:text="热门城市"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/tvTitleHot_city"
+                    android:background="#ccc" />
+
+                <cn.heyl.weituangou.ui.MyGridView
+                    android:id="@+id/gvHot_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitleHot_city"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="16dp" >
+
+                <TextView
+                    android:id="@+id/tvTitleAll_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:gravity="center_vertical"
+                    android:text="全部城市"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/tvTitleAll_city"
+                    android:background="#ccc" />
+
+                <cn.heyl.weituangou.ui.MyGridView
+                    android:id="@+id/gvAll_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitleAll_city"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="3" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/slSearch_city"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvSearch_city"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="搜 索 结 果"
+                android:textSize="16sp" />
+
+            <cn.heyl.weituangou.ui.MyListView
+                android:id="@+id/lvSearch_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@android:color/transparent" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

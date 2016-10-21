@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="8dp"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv1_nearby"
+        android:layout_width="match_parent"
+        android:background="#aeee"
+        android:layout_height="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlShop_title_nearby"
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="10dp"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvShopName_nearby"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="真功夫"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvScore_nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#fa0"
+            android:layout_below="@+id/tvShopName_nearby"
+            android:text="4.5分" />
+        <TextView
+            android:textSize="12sp"
+            android:textColor="#666"
+            android:id="@+id/tvPrePrice_nearby"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="140dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvScore_nearby"
+            android:layout_toRightOf="@+id/tvScore_nearby"
+            android:text="￥45/人" />
+
+        <TextView
+            android:id="@+id/tvAddress_nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvPrePrice_nearby"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/tvPrePrice_nearby"
+            android:layout_marginRight="10dp"
+            android:singleLine="true"
+            android:text="新街口"
+            android:textColor="#666"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_height="0.5dp"
+        android:background="#aaa" />
+
+    <cn.heyl.weituangou.ui.MyListView
+        android:id="@+id/lvItemDeal_nearby"
+        android:layout_width="match_parent"
+        android:listSelector="@android:color/transparent"
+        android:layout_height="wrap_content" >
+    </cn.heyl.weituangou.ui.MyListView>
+
+</LinearLayout>

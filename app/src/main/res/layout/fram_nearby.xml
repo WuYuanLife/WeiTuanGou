@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlNearby"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fa3957" >
+
+        <TextView
+            android:id="@+id/tvSearch_deal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="搜索商品"
+            android:layout_marginRight="4dp"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="7dp"
+            android:layout_toLeftOf="@+id/tvSearch_deal"
+            android:scaleType="fitXY"
+            android:src="@drawable/second_category_button_normal" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:scaleType="center"
+            android:src="@drawable/cityselect_search_icon" />
+
+        <EditText
+            android:id="@+id/etSearch_nearby"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:layout_marginBottom="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tvSearch_deal"
+            android:layout_toRightOf="@+id/imageView2"
+            android:background="@null"
+            android:hint="请输入商品名称"
+            android:textColor="#333"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+    <com.yyydjk.library.DropDownMenu
+        android:id="@+id/dropDownMenu_nearby"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rlNearby"
+        android:layout_height="match_parent"
+        app:ddmenuTextSize="15sp"
+        app:ddtextUnselectedColor="@color/drop_down_unselected"
+        app:ddtextSelectedColor="@color/drop_down_selected"
+        app:dddividerColor="@color/gray"
+        app:ddunderlineColor="@color/gray"
+        app:ddmenuSelectedIcon="@drawable/component_album_categoty_up"
+        app:ddmenuUnselectedIcon="@drawable/component_album_categoty_down"
+        app:ddmaskColor="@color/mask_color"
+        app:ddmenuBackgroundColor="@color/white"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tvEmpty_nearby"
+        android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:textSize="26sp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/fram_animation" />
+
+</RelativeLayout>

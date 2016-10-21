@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    tools:context=".activity.SearchShopsActivity" >
+
+    <TextView
+        android:id="@+id/tvTitle_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#eefa3957"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <com.yyydjk.library.DropDownMenu
+        android:id="@+id/dropDownMenu_search"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tvTitle_search"
+        android:layout_height="match_parent"
+        app:ddmenuTextSize="15sp"
+        app:ddtextUnselectedColor="@color/drop_down_unselected"
+        app:ddtextSelectedColor="@color/drop_down_selected"
+        app:dddividerColor="@color/gray"
+        app:ddunderlineColor="@color/gray"
+        app:ddmenuSelectedIcon="@drawable/component_album_categoty_up"
+        app:ddmenuUnselectedIcon="@drawable/component_album_categoty_down"
+        app:ddmaskColor="@color/mask_color"
+        app:ddmenuBackgroundColor="@color/white"
+        />
+    <TextView
+            android:id="@+id/tvEmpty_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:textSize="26sp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/fram_animation" />
+    
+
+</RelativeLayout>

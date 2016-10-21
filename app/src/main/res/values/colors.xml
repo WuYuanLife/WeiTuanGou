@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="main_text_cheched">#fa2947</color>
+    <color name="main_text_uncheched">#555</color>
+    <color name="drop_down_selected">#fa2947</color>
+    <color name="drop_down_unselected">#333</color>
+
+    <color name="white">#ffffff</color>
+    <color name="gray">#cccccc</color>
+    <color name="mask_color">#88888888</color>
+    <color name="check_bg">#f2f2f2</color>
+    <color name="un_press_color">#e13c48</color>
+
+    <color name="theme_500">#607D8B</color>
+    <color name="theme_100">#e1eaed</color>
+    <color name="theme_700">#455A64</color>
+
+    <color name="accent_A100">#FF8A80</color>
+    <color name="accent_A200">#FF5252</color>
+    <color name="accent_A400">#FF1744</color>
+
+</resources>

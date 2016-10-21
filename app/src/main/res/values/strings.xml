@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">微团购</string>
+    <string name="action_settings">Settings</string>
+    <string name="hot_city">{"errno": 0,"msg": "success","cities": [{"city_id": 100010000,"city_name": "北京市","short_name": "北京","map_id": "131","city_pinyin": "beijing","short_pinyin": "bj"},{"city_id": 200010000,"city_name": "上海市","short_name": "上海","map_id": "289","city_pinyin": "shanghai","short_pinyin": "sh"},{"city_id": 800010000,"city_name": "成都市","short_name": "成都","map_id": "75","city_pinyin": "chengdu","short_pinyin": "cd"},{"city_id": 600010000,"city_name": "杭州市","short_name": "杭州","map_id": "179","city_pinyin": "hangzhou","short_pinyin": "hz"},{"city_id": 2000010000,"city_name": "郑州市","short_name": "郑州","map_id": "268","city_pinyin": "zhengzhou","short_pinyin": "zz"},{"city_id": 400010000,"city_name": "武汉市","short_name": "武汉","map_id": "218","city_pinyin": "wuhan","short_pinyin": "wh"},{"city_id": 500010000,"city_name": "天津市","short_name": "天津","map_id": "332","city_pinyin": "tianjin","short_pinyin": "tj"},{"city_id": 900010000,"city_name": "重庆市","short_name": "重庆","map_id": "132","city_pinyin": "chongqing","short_pinyin": "cq"},{"city_id": 1000010000,"city_name": "西安市","short_name": "西安","map_id": "233","city_pinyin": "xian","short_pinyin": "xa"}]}</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_search_shops">SearchShopsActivity</string>
+    <string name="title_activity_open">OpenActivity</string>
+    <string name="title_activity_deal">DealActivity</string>
+    <string name="title_activity_web">WebActivity</string>
+    <!-- 自定义组件 -->
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">松开可以刷新</string>
+    <string name="lastUpdateTime">最近更新：%s</string>
+    <string name="load_full">已加载全部</string>
+    <string name="no_data">暂无数据</string>
+    <string name="more">加载中</string>
+
+
+    <string name="d">图片描述</string>
+</resources>

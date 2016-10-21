@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="10dp"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/iv1_list_deal_nearby"
+        android:layout_width="96dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="56dp"
+        android:scaleType="fitXY" />
+
+
+    <TextView
+        android:id="@+id/tvDescription_list_deal_nearby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvPrice_list_deal_nearby"
+        android:layout_alignTop="@+id/iv1_list_deal_nearby"
+        android:layout_marginTop="4dp"
+        android:layout_toLeftOf="@+id/tvScore_list_deal_nearby"
+        android:layout_toRightOf="@+id/iv1_list_deal_nearby"
+        android:text="以下蛋糕2选1！仅限自提，需预约！以下蛋糕2选1！仅限自提，需预约！以下蛋糕2选1！仅限自提，需预约！"
+        android:singleLine="true"
+        android:textColor="#777"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvPrice_list_deal_nearby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv1_list_deal_nearby"
+        android:layout_toRightOf="@+id/iv1_list_deal_nearby"
+        android:text="￥ 100.00"
+        android:textColor="#f36"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvSale_list_deal_nearby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPrice_list_deal_nearby"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:text="已售122"
+        android:textColor="#888"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:id="@+id/tvScore_list_deal_nearby"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_height="wrap_content"
+        android:text="5分"
+        android:textColor="#f81"
+        android:textSize="12sp" />
+    
+
+</RelativeLayout>
