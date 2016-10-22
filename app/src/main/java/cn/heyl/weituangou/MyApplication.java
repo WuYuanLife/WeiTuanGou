@@ -1,5 +1,17 @@
 package cn.heyl.weituangou;
 
+import android.app.Application;
+import android.content.SharedPreferences;
+import android.util.Log;
+
+import com.baidu.location.BDLocation;
+import com.baidu.location.BDLocationListener;
+import com.baidu.location.LocationClient;
+import com.baidu.mapapi.SDKInitializer;
+import com.google.gson.Gson;
+
+import org.xutils.x;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -8,19 +20,8 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.xutils.x;
-
-import android.app.Application;
-import android.content.SharedPreferences;
-import android.util.Log;
 import cn.heyl.weituangou.entity.City;
 import cn.heyl.weituangou.entity.User;
-
-import com.baidu.location.BDLocation;
-import com.baidu.location.BDLocationListener;
-import com.baidu.location.LocationClient;
-import com.baidu.mapapi.SDKInitializer;
-import com.google.gson.Gson;
 
 /**
  * Creaded by heyl 2016-10-8

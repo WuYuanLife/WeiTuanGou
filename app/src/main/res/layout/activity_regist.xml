@@ -90,6 +90,7 @@
             android:layout_height="50dp"
             android:id="@+id/etPwd"
             android:hint="请输入密码"
+            android:inputType="textPassword"
             android:background="@null"
             android:layout_weight="1"/>
     </LinearLayout>

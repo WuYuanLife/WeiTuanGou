@@ -1,302 +1,400 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone" >
-
-        <ListView
-            android:id="@+id/lvMine"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:listSelector="@android:color/transparent" >
-        </ListView>
-    </RelativeLayout>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/rlTitle"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:background="#fa3333" >
+        android:layout_height="210dp"
+        android:background="#edde0c">
 
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:textColor="#fff"
-        android:textSize="18sp"
-        android:text="个 人 中 心" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="个 人 中 心"
+            android:textColor="#fff"
+            android:textSize="18sp" />
 
-    <cn.heyl.weituangou.ui.CircleImageView
-        android:id="@+id/civTouxiang"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/a011" />
-    <TextView
-        android:id="@+id/tvName_mine"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/civTouxiang"
-        android:gravity="center"
-        android:textColor="#fff"
-        android:textSize="16sp"
-        android:text="请 登 录" />
+        <cn.heyl.weituangou.ui.CircleImageView
+            android:id="@+id/civTouxiang"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/a011" />
+        <!--<TextView-->
+        <!--android:id="@+id/tvName_mine"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_below="@+id/civTouxiang"-->
+        <!--android:gravity="center"-->
+        <!--android:textColor="#fff"-->
+        <!--android:textSize="16sp"-->
+        <!--android:text="请 登 录" />-->
     </RelativeLayout>
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_space_image_height"
+        android:background="@color/primary" />
+
+    <obsrcollview.ObservableScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="56dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flexible_space_image_height"
+                android:background="@android:color/transparent" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlShoucang"
+                android:layout_width="match_parent"
+                android:layout_height="52dp">
+
+                <ImageView
+                    android:id="@+id/ivShoucang"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mine_ico_shoucang" />
+
+                <TextView
+                    android:id="@+id/tvShoucang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_toRightOf="@+id/ivShoucang"
+                    android:gravity="center_vertical"
+                    android:text="我 收 藏 的 商 品"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_alignLeft="@+id/tvShoucang"
+                    android:layout_below="@+id/tvShoucang"
+                    android:orientation="vertical"
+                    android:paddingRight="30dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#ddfa69b7" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#fa69b7" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rljilu"
+                android:layout_width="match_parent"
+                android:layout_height="52dp">
+
+                <ImageView
+                    android:id="@+id/ivjilu"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mine_ico_shoucang" />
+
+                <TextView
+                    android:id="@+id/tvjilu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_toRightOf="@+id/ivjilu"
+                    android:gravity="center_vertical"
+                    android:text="我 收 藏 的 商 品"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_alignLeft="@+id/tvjilu"
+                    android:layout_below="@+id/tvjilu"
+                    android:orientation="vertical"
+                    android:paddingRight="30dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#ddfa69b7" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#fa69b7" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlAddress"
+                android:layout_width="match_parent"
+                android:layout_height="52dp">
+
+                <ImageView
+                    android:id="@+id/ivAddress"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mine_ico_address" />
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_toRightOf="@+id/ivAddress"
+                    android:gravity="center_vertical"
+                    android:text="我 的 地 址 管 理"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_alignLeft="@+id/tvAddress"
+                    android:layout_below="@+id/tvAddress"
+                    android:orientation="vertical"
+                    android:paddingRight="30dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#ddfa69b7" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#fa69b7" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlOrder"
+                android:layout_width="match_parent"
+                android:layout_height="52dp">
+
+                <ImageView
+                    android:id="@+id/ivOrder"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mine_ico_order" />
+
+                <TextView
+                    android:id="@+id/tvOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_toRightOf="@+id/ivOrder"
+                    android:gravity="center_vertical"
+                    android:text="我 的 订 单"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_alignLeft="@+id/tvOrder"
+                    android:layout_below="@+id/tvOrder"
+                    android:orientation="vertical"
+                    android:paddingRight="30dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#ddfa69b7" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#fa69b7" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSettings"
+                android:layout_width="match_parent"
+                android:layout_height="52dp">
+
+                <ImageView
+                    android:id="@+id/ivSettings"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mine_ico_settings" />
+
+                <TextView
+                    android:id="@+id/tvSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_toRightOf="@+id/ivSettings"
+                    android:gravity="center_vertical"
+                    android:text="设 置"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_alignLeft="@+id/tvSettings"
+                    android:layout_below="@+id/tvSettings"
+                    android:orientation="vertical"
+                    android:paddingRight="30dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#ddfa69b7" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#fa69b7" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlExit"
+                android:layout_width="match_parent"
+                android:layout_height="52dp">
+
+                <ImageView
+                    android:id="@+id/ivExit"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mine_ico_exit" />
+
+                <TextView
+                    android:id="@+id/tvExit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_toRightOf="@+id/ivExit"
+                    android:gravity="center_vertical"
+                    android:text="退 出"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_alignLeft="@+id/tvExit"
+                    android:layout_below="@+id/tvExit"
+                    android:orientation="vertical"
+                    android:paddingRight="30dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#ddfa69b7" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#fa69b7" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="@string/desc" />
+        </LinearLayout>
+    </obsrcollview.ObservableScrollView>
+
+    <View
+        android:id="@+id/toolbar"
+
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/primary"
+        android:minHeight="56dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="40dp"
-        android:orientation="vertical" >
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <RelativeLayout
-            android:id="@+id/rlShoucang"
+        <TextView
+            android:id="@+id/tvName_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:minHeight="56dp"
+            android:padding="@dimen/activity_vertical_margin"
+
+            android:text="请 登 录"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/llview"
             android:layout_width="match_parent"
-            android:layout_height="52dp" >
-
-            <ImageView
-                android:id="@+id/ivShoucang"
-                android:layout_width="66dp"
-                android:layout_height="match_parent"
-                android:scaleType="centerInside"
-                android:src="@drawable/mine_ico_shoucang" />
-
-            <TextView
-                android:id="@+id/tvShoucang"
-                android:layout_width="wrap_content"
-                android:layout_height="49dp"
-                android:layout_toRightOf="@+id/ivShoucang"
-                android:gravity="center_vertical"
-                android:text="我 收 藏 的 商 品"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#333"
-                android:textSize="14sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_alignLeft="@+id/tvShoucang"
-                android:layout_below="@+id/tvShoucang"
-                android:orientation="vertical"
-                android:paddingRight="30dp" >
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="#ddfa69b7" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1.5dp" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="#fa69b7" />
-            </LinearLayout>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/rlAddress"
-            android:layout_width="match_parent"
-            android:layout_height="52dp" >
-
-            <ImageView
-                android:id="@+id/ivAddress"
-                android:layout_width="66dp"
-                android:layout_height="match_parent"
-                android:scaleType="centerInside"
-                android:src="@drawable/mine_ico_address" />
-
-            <TextView
-                android:id="@+id/tvAddress"
-                android:layout_width="wrap_content"
-                android:layout_height="49dp"
-                android:layout_toRightOf="@+id/ivAddress"
-                android:gravity="center_vertical"
-                android:text="我 的 地 址 管 理"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#333"
-                android:textSize="14sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_alignLeft="@+id/tvAddress"
-                android:layout_below="@+id/tvAddress"
-                android:orientation="vertical"
-                android:paddingRight="30dp" >
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="#ddfa69b7" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1.5dp" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="#fa69b7" />
-            </LinearLayout>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/rlOrder"
-            android:layout_width="match_parent"
-            android:layout_height="52dp" >
-
-            <ImageView
-                android:id="@+id/ivOrder"
-                android:layout_width="66dp"
-                android:layout_height="match_parent"
-                android:scaleType="centerInside"
-                android:src="@drawable/mine_ico_order" />
-
-            <TextView
-                android:id="@+id/tvOrder"
-                android:layout_width="wrap_content"
-                android:layout_height="49dp"
-                android:layout_toRightOf="@+id/ivOrder"
-                android:gravity="center_vertical"
-                android:text="我 的 订 单"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#333"
-                android:textSize="14sp" />
- <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                 android:layout_alignLeft="@+id/tvOrder"
-                android:layout_below="@+id/tvOrder"
-                android:orientation="vertical"
-                android:paddingRight="30dp" >
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="#ddfa69b7" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1.5dp" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="#fa69b7" />
-                </LinearLayout>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/rlSettings"
-            android:layout_width="match_parent"
-            android:layout_height="52dp" >
-
-            <ImageView
-                android:id="@+id/ivSettings"
-                android:layout_width="66dp"
-                android:layout_height="match_parent"
-                android:scaleType="centerInside"
-                android:src="@drawable/mine_ico_settings" />
-
-            <TextView
-                android:id="@+id/tvSettings"
-                android:layout_width="wrap_content"
-                android:layout_height="49dp"
-                android:layout_toRightOf="@+id/ivSettings"
-                android:gravity="center_vertical"
-                android:text="设 置"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#333"
-                android:textSize="14sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-               android:layout_alignLeft="@+id/tvSettings"
-                android:layout_below="@+id/tvSettings"
-                android:orientation="vertical"
-                android:paddingRight="30dp" >
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="#ddfa69b7" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1.5dp" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="#fa69b7" />
-                </LinearLayout>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/rlExit"
-            android:layout_width="match_parent"
-            android:layout_height="52dp" >
-
-            <ImageView
-                android:id="@+id/ivExit"
-                android:layout_width="66dp"
-                android:layout_height="match_parent"
-                android:scaleType="centerInside"
-                android:src="@drawable/mine_ico_exit" />
-
-            <TextView
-                android:id="@+id/tvExit"
-                android:layout_width="wrap_content"
-                android:layout_height="49dp"
-                android:layout_toRightOf="@+id/ivExit"
-                android:gravity="center_vertical"
-                android:text="退 出"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#333"
-                android:textSize="14sp" />
-
-            
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_alignLeft="@+id/tvExit"
-                android:layout_below="@+id/tvExit"
-                android:orientation="vertical"
-                android:paddingRight="30dp" >
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="#ddfa69b7" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1.5dp" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="#fa69b7" />
-                </LinearLayout>
-        </RelativeLayout>
+            android:layout_height="@dimen/flexible_space_image_height"
+            android:background="@null" />
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

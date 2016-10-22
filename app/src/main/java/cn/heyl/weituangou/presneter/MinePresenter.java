@@ -11,6 +11,7 @@ import cn.heyl.weituangou.view.IMineView;
  */
 public class MinePresenter implements IMinePresneter {
 	private IUserModel model;
+	private int i=0;
 	private IMineView view;
 
 	public MinePresenter(IMineView view) {
@@ -24,14 +25,16 @@ public class MinePresenter implements IMinePresneter {
 
 			@Override
 			public void onSuccess(Object obj) {
+				if (view!=null){
 				view.updateUserInfo();
+			}
 			}
 			@Override
 			public void onError(Object obj) {
 				Log.i("hyl", obj.toString());
 			}
 		});
-		
+		i++;
 	}
 
 }
