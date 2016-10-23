@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -59,8 +59,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="56dp"
             android:layout_height="wrap_content"
+
             android:orientation="vertical">
 
             <View
@@ -68,11 +68,15 @@
                 android:layout_height="@dimen/flexible_space_image_height"
                 android:background="@android:color/transparent" />
 
-
+<View
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="50dp"/>
             <RelativeLayout
                 android:id="@+id/rlShoucang"
                 android:layout_width="match_parent"
-                android:layout_height="52dp">
+                android:layout_height="52dp"
+                android:background="@android:color/white">
 
                 <ImageView
                     android:id="@+id/ivShoucang"
@@ -119,7 +123,8 @@
             <RelativeLayout
                 android:id="@+id/rljilu"
                 android:layout_width="match_parent"
-                android:layout_height="52dp">
+                android:layout_height="52dp"
+                android:background="@android:color/white">
 
                 <ImageView
                     android:id="@+id/ivjilu"
@@ -134,7 +139,7 @@
                     android:layout_height="49dp"
                     android:layout_toRightOf="@+id/ivjilu"
                     android:gravity="center_vertical"
-                    android:text="我 收 藏 的 商 品"
+                    android:text="我 的 代 金 券"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#333"
                     android:textSize="14sp" />
@@ -162,10 +167,12 @@
                         android:background="#fa69b7" />
                 </LinearLayout>
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/rlAddress"
                 android:layout_width="match_parent"
-                android:layout_height="52dp">
+                android:layout_height="52dp"
+                android:background="@android:color/white">
 
                 <ImageView
                     android:id="@+id/ivAddress"
@@ -210,9 +217,58 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/rlOrder1"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@android:color/white">
+
+                <ImageView
+                    android:id="@+id/ivOrder1"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mine_ico_order" />
+
+                <TextView
+                    android:id="@+id/tvOrder1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_toRightOf="@+id/ivOrder1"
+                    android:gravity="center_vertical"
+                    android:text="积 分 商 城"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_alignLeft="@+id/tvOrder1"
+                    android:layout_below="@+id/tvOrder1"
+                    android:orientation="vertical"
+                    android:paddingRight="30dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#ddfa69b7" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#fa69b7" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:id="@+id/rlOrder"
                 android:layout_width="match_parent"
-                android:layout_height="52dp">
+                android:layout_height="52dp"
+                android:background="@android:color/white">
 
                 <ImageView
                     android:id="@+id/ivOrder"
@@ -259,7 +315,8 @@
             <RelativeLayout
                 android:id="@+id/rlSettings"
                 android:layout_width="match_parent"
-                android:layout_height="52dp">
+                android:layout_height="52dp"
+                android:background="@android:color/white">
 
                 <ImageView
                     android:id="@+id/ivSettings"
@@ -274,7 +331,7 @@
                     android:layout_height="49dp"
                     android:layout_toRightOf="@+id/ivSettings"
                     android:gravity="center_vertical"
-                    android:text="设 置"
+                    android:text="服 务 中 心"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#333"
                     android:textSize="14sp" />
@@ -304,34 +361,34 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/rlExit"
+                android:id="@+id/rlSettings1"
                 android:layout_width="match_parent"
-                android:layout_height="52dp">
+                android:layout_height="52dp"
+                android:background="@android:color/white">
 
                 <ImageView
-                    android:id="@+id/ivExit"
+                    android:id="@+id/ivSettings1"
                     android:layout_width="66dp"
                     android:layout_height="match_parent"
                     android:scaleType="centerInside"
-                    android:src="@drawable/mine_ico_exit" />
+                    android:src="@drawable/mine_ico_settings" />
 
                 <TextView
-                    android:id="@+id/tvExit"
+                    android:id="@+id/tvSettings1"
                     android:layout_width="wrap_content"
                     android:layout_height="49dp"
-                    android:layout_toRightOf="@+id/ivExit"
+                    android:layout_toRightOf="@+id/ivSettings1"
                     android:gravity="center_vertical"
-                    android:text="退 出"
+                    android:text="设 置"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#333"
                     android:textSize="14sp" />
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="3dp"
-                    android:layout_alignLeft="@+id/tvExit"
-                    android:layout_below="@+id/tvExit"
+                    android:layout_alignLeft="@+id/tvSettings1"
+                    android:layout_below="@+id/tvSettings1"
                     android:orientation="vertical"
                     android:paddingRight="30dp">
 
@@ -351,15 +408,41 @@
                 </LinearLayout>
             </RelativeLayout>
 
+            <RelativeLayout
+                android:id="@+id/rlExit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+
+                <ImageView
+                    android:id="@+id/ivExit"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center" />
+
+                <TextView
+                    android:id="@+id/tvExit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_toRightOf="@+id/ivExit"
+                    android:gravity="center_vertical"
+                    android:text="退 出"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
-                android:paddingBottom="@dimen/activity_vertical_margin"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:text="@string/desc" />
+                android:text="@string/desc"
+                android:textColor="@android:color/white" />
         </LinearLayout>
     </obsrcollview.ObservableScrollView>
 

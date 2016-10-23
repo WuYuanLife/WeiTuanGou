@@ -30,12 +30,10 @@ public class SCViewPager extends ViewPager {
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-        super.onPageScrolled(position, positionOffset, positionOffsetPixels);
-
-        for (int i = 0; i < mViewAnimation.size(); i++) {
-            mViewAnimation.get(i).applyAnimation(position, positionOffset);
-        }
-
+            super.onPageScrolled(position, positionOffset, positionOffsetPixels);
+            for (int i = 0; i < mViewAnimation.size(); i++) {
+                mViewAnimation.get(i).applyAnimation(position, positionOffset);
+            }
     }
 
 }

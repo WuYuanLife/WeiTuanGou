@@ -1,9 +1,5 @@
 package cn.heyl.weituangou.fragment;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
@@ -22,19 +18,20 @@ import android.widget.Toast;
 
 import com.yyydjk.library.DropDownMenu;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import butterknife.ButterKnife;
-import cn.heyl.weituangou.adapter.ConstellationAdapter;
-import cn.heyl.weituangou.adapter.GirdDropDownAdapter;
-import cn.heyl.weituangou.adapter.ListDropDownAdapter;
 import cn.heyl.weituangou.R;
 import cn.heyl.weituangou.activity.MainActivity;
 import cn.heyl.weituangou.activity.SearchShopsActivity;
+import cn.heyl.weituangou.adapter.ConstellationAdapter;
+import cn.heyl.weituangou.adapter.GirdDropDownAdapter;
+import cn.heyl.weituangou.adapter.ListDropDownAdapter;
 import cn.heyl.weituangou.adapter.NearbyAdapter;
 import cn.heyl.weituangou.entity.Dis;
-import cn.heyl.weituangou.entity.DisResp;
 import cn.heyl.weituangou.entity.Shop;
-import cn.heyl.weituangou.model.IModel;
-import cn.heyl.weituangou.model.ShopModel;
 import cn.heyl.weituangou.presneter.INearbyPresnter;
 import cn.heyl.weituangou.presneter.NearbyPresnter;
 import cn.heyl.weituangou.ui.AutoListView;
@@ -55,7 +52,7 @@ public class NearbyFragment extends Fragment implements AutoListView.OnLoadListe
 
 
 	private DropDownMenu mDropDownMenu;
-	private String headers[] = {"分类", "3km", "商圈", "综合排序"};
+	private String headers[] = {"分类", "3km", "价格", "综合排序"};
 	private List<View> popupViews = new ArrayList<View>();
 
 	private GirdDropDownAdapter d1Adapter;
@@ -65,7 +62,7 @@ public class NearbyFragment extends Fragment implements AutoListView.OnLoadListe
 
 	private String D1[] = {"全部分类", "生活服务", "休闲娱乐", "美 食", "酒店旅游", "其 他"};
 	private String D2[] = {"3km", "2km", "1km", "500m"};
-    private String D3[] = {"不限","不限","不限","不限","不限","不限"};
+    private String D3[] = {"不限","200以下","500以下","1000以下","2000以下","2000以上"};
     private String D4[] = {"综合排序","价格低","价格高","折扣高","销量高","最新发布","用户评分高"};
 
     private int currentSort = 0;

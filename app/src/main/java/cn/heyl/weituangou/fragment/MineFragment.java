@@ -122,7 +122,7 @@ public class MineFragment extends Fragment implements ObservableScrollViewCallba
 			@Override
 			public void run() {
 				mScrollView.scrollTo(0, mFlexibleSpaceImageHeight - mActionBarSize);
-//				mScrollView.scrollTo(0, 0);
+				mScrollView.scrollTo(0, 0);
 
 			}
 		});
@@ -225,8 +225,7 @@ public class MineFragment extends Fragment implements ObservableScrollViewCallba
 		User user = MyApplication.getApp().getCurrentUser();
 		String nickname = user.getNickname();
 		tvName.setText(nickname);
-		mScrollView.scrollTo(0,0);
-		tvName.invalidate();
+		onScrollChanged(mScrollView.getCurrentScrollY(),true,false);
 	}
 
 

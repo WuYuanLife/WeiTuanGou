@@ -1,21 +1,13 @@
 package cn.heyl.weituangou.activity;
 
-import cn.heyl.weituangou.MyApplication;
-import cn.heyl.weituangou.R;
-
+import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.app.Activity;
-import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.widget.ImageView;
 
 import com.dev.sacot41.scviewpager.DotsView;
 import com.dev.sacot41.scviewpager.SCPositionAnimation;
@@ -23,6 +15,10 @@ import com.dev.sacot41.scviewpager.SCViewAnimation;
 import com.dev.sacot41.scviewpager.SCViewAnimationUtil;
 import com.dev.sacot41.scviewpager.SCViewPager;
 import com.dev.sacot41.scviewpager.SCViewPagerAdapter;
+
+import cn.heyl.weituangou.MyApplication;
+import cn.heyl.weituangou.R;
+import obsrcollview.ScrollUtils;
 
 public class OpenActivity extends FragmentActivity {
 	private static final int NUM_PAGES = 3;
@@ -137,7 +133,12 @@ public class OpenActivity extends FragmentActivity {
 			}
 		});
 
+		ScrollUtils.addOnGlobalLayoutListener(mDotsView, new Runnable() {
+			@Override
+			public void run() {
 
+			}
+		});
 	}
 
 

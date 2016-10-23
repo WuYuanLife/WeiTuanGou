@@ -1,10 +1,5 @@
 package cn.heyl.weituangou.activity;
 
-import java.util.List;
-
-import org.xutils.x;
-import org.xutils.view.annotation.ViewInject;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +15,12 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
+
+import java.util.List;
+
 import cn.heyl.weituangou.MyApplication;
 import cn.heyl.weituangou.R;
 import cn.heyl.weituangou.adapter.CityAdapter;
@@ -71,8 +72,8 @@ public class CityActivity extends Activity implements ICityActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_city);
 		x.view().inject(this);
-		setlisteners();
 		etSearch.clearFocus();
+		setlisteners();
 		app=MyApplication.getApp();
 		if(!app.isHaveRecently())
 			tvReturn.setVisibility(View.GONE);
