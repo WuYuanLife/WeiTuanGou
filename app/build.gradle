@@ -42,4 +42,5 @@ dependencies {
     compile 'com.daimajia.slider:library:1.1.5'
     compile files('libs/jsoup-1.9.2.jar')
     compile 'com.android.support:appcompat-v7:24.2.1'
+    compile files('libs/zxing.jar')
 }

@@ -1,13 +1,8 @@
 package cn.heyl.weituangou.fragment;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -32,6 +27,10 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import cn.heyl.weituangou.MyApplication;
 import cn.heyl.weituangou.R;
 import cn.heyl.weituangou.activity.CityActivity;
@@ -49,6 +48,7 @@ import cn.heyl.weituangou.entity.Resp;
 import cn.heyl.weituangou.entity.Weather;
 import cn.heyl.weituangou.presneter.HomePresnter;
 import cn.heyl.weituangou.presneter.IHomePresneter;
+import zxing.MipcaActivityCapture;
 
 /**
  * Creaded by heyl 2016-10-9
@@ -61,6 +61,7 @@ public class HomeFragment extends Fragment implements IHomeFram,
     private TextView tvCityName;
     private TextView tvWeather;
     private ImageView iv;
+    private ImageView ivZxing;
     private SliderLayout mDemoSlider;
     private GridView gvCat;
 
@@ -90,7 +91,7 @@ public class HomeFragment extends Fragment implements IHomeFram,
 
         tvCityName = (TextView) view.findViewById(R.id.tvCityName_Main);
         tvWeather = (TextView) view.findViewById(R.id.tvWeather_main);
-
+        ivZxing= (ImageView) view.findViewById(R.id.ivSaoyisao_main);
         presnter.loadImage();
         setHeadView();
         setListener();
@@ -234,6 +235,14 @@ public class HomeFragment extends Fragment implements IHomeFram,
                     intent.putExtra("url", "http:" + image.getUrl());
                     startActivity(intent);
                 }
+            }
+        });
+        ivZxing.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), MipcaActivityCapture.class);
+                startActivity(intent);
             }
         });
     }

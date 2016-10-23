@@ -103,6 +103,16 @@
             android:name="cn.heyl.weituangou.activity.WebViewActivity"
             android:label="@string/title_activity_web" >
         </activity>
+        <activity android:name="zxing.MipcaActivityCapture"/>
+        <activity android:name="zxing.OpenZXingActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 
+    <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
 </manifest>
