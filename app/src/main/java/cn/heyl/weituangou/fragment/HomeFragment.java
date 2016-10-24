@@ -79,6 +79,8 @@ public class HomeFragment extends Fragment implements IHomeFram,
     private CatHomeAdapter catAdapter;
     private List<Cat> cats;
 
+    private String imageUrl="https://ss0.baidu.com//9vo3dSag_xI4khGko9WTAnF6hhy//lbs//pic//item//4e4a20a4462309f741d1fe9e770e0cf3d6cad684.jpg";
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -107,6 +109,7 @@ public class HomeFragment extends Fragment implements IHomeFram,
                 .inflate(R.layout.headview_home, null);
         mDemoSlider = (SliderLayout) hearderViewLayout.findViewById(R.id.slider);
         iv = (ImageView) hearderViewLayout.findViewById(R.id.iv_home);
+        Glide.with(this).load(imageUrl).into(iv);
         gvCat = (GridView) hearderViewLayout.findViewById(R.id.gvCat_home);
         setCats();
 //        tvEmpty = (TextView) hearderViewLayout.findViewById(R.id.tvEmpty_home);
@@ -274,12 +277,12 @@ public class HomeFragment extends Fragment implements IHomeFram,
 
     public void updateImage(ImageUrl imageUrl) {
         image = imageUrl;
-        if (imageUrl != null) {
-//            tvEmpty.setVisibility(View.GONE);
-//            anim.stop();
-            Glide.with(this).load(imageUrl.getPic_url()).into(iv);
-            Log.i("hyl", "updateImage: " + imageUrl);
-        }
+//        if (imageUrl != null) {
+////            tvEmpty.setVisibility(View.GONE);
+////            anim.stop();
+//            Glide.with(this).load(imageUrl.getPic_url()).into(iv);
+//            Log.i("hyl", "updateImage: " + imageUrl);
+//        }
 
     }
 

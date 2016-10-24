@@ -165,8 +165,8 @@ public class MineFragment extends Fragment implements ObservableScrollViewCallba
 			case R.id.rlOrder:
 
 				break;
-			case R.id.rlSettings:
-
+			case R.id.rlTitle:
+				Log.d("hyl", "onClick:rlTitle ");
 				break;
 			case R.id.rlExit:
 
@@ -205,14 +205,15 @@ public class MineFragment extends Fragment implements ObservableScrollViewCallba
 
 	private void setListener() {
 		MineOnClick listener = new MineOnClick();
-		rlShoucang.setOnClickListener(listener);
-		rlAddress.setOnClickListener(listener);
-		rlOrder.setOnClickListener(listener);
-		rlSettings.setOnClickListener(listener);
-		rlExit.setOnClickListener(listener);
+//		rlShoucang.setOnClickListener(listener);
+//		rlAddress.setOnClickListener(listener);
+//		rlOrder.setOnClickListener(listener);
+//		rlSettings.setOnClickListener(listener);
+//		rlExit.setOnClickListener(listener);
 		rlTitle.setOnClickListener(listener);
 		mOverlayView.setOnClickListener(listener);
 		llview.setOnClickListener(listener);
+		civTouxiang.setOnClickListener(listener);
 	}
 
 	public void slide(float v) {
@@ -247,7 +248,7 @@ public class MineFragment extends Fragment implements ObservableScrollViewCallba
 		ViewHelper.setTranslationY(mOverlayView, ScrollUtils.getFloat(-scrollY, minOverlayTransitionY, 0));
 		ViewHelper.setTranslationY(rlTitle,  ScrollUtils.getFloat(-scrollY, minOverlayTransitionY, 0));
 //        ViewHelper.setTranslationY(rlTitle,  ScrollUtils.getFloat1(-scrollY/2, minOverlayTransitionY, 0));
-		Log.d("hyl", "onScrollChanged:2 "+(-scrollY )+ minOverlayTransitionY+firstScroll+dragging);
+//		Log.d("hyl", "onScrollChanged:2 "+(-scrollY )+ minOverlayTransitionY+firstScroll+dragging);
 //        ViewHelper.setTranslationY(mImageView, ScrollUtils.getFloat(-scrollY / 2, minOverlayTransitionY, 0));
 
 		// Change alpha of overlay
