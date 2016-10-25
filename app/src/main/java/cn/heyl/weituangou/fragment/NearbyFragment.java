@@ -235,9 +235,7 @@ public class NearbyFragment extends Fragment implements AutoListView.OnLoadListe
 //
 //				}
 //			});
-			currentCat=326;
-			currentSort = 0;
-			currentRadius = 3000;
+
             lvNearby.setVisibility(View.INVISIBLE);
             tvEmpty.setVisibility(View.VISIBLE);
             anim.start();
@@ -276,8 +274,12 @@ public class NearbyFragment extends Fragment implements AutoListView.OnLoadListe
 	public void onResume() {
 		super.onResume();
 		etSearch.setText("");
-		if(!MainActivity.isCurrent)
-            update(false);
+		if(!MainActivity.isCurrent){
+			currentCat=326;
+			currentSort = 0;
+			currentRadius = 3000;
+			update(false);
+		}
 	}
 	@Override
 	public void updateNearbyList(List<Shop> shops) {
