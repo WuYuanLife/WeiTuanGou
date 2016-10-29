@@ -103,6 +103,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.Login3Activity"></activity>
         <!-- value的值是从lbsyun.baidu.com申请，跟证书有关，换电脑就重新申请 -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"

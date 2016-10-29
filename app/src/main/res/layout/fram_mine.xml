@@ -124,7 +124,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/rlbaidu"
+                android:id="@+id/rlLogin3"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:background="@android:color/white">
@@ -142,7 +142,7 @@
                     android:layout_height="49dp"
                     android:layout_toRightOf="@+id/ivbaidu"
                     android:gravity="center_vertical"
-                    android:text="百 度 账 号 登 录"
+                    android:text="第 三 方 账 号 登 录"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#333"
                     android:textSize="14sp" />

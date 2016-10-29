@@ -27,6 +27,7 @@ import java.util.List;
 
 import cn.heyl.weituangou.MyApplication;
 import cn.heyl.weituangou.R;
+import cn.heyl.weituangou.activity.Login3Activity;
 import cn.heyl.weituangou.activity.LoginActivity;
 import cn.heyl.weituangou.adapter.GameAdapter;
 import cn.heyl.weituangou.entity.Game;
@@ -57,6 +58,8 @@ public class MineFragment extends Fragment implements ObservableScrollViewCallba
 	private RelativeLayout rlOrder;
 	@ViewInject(R.id.rlSettings)
 	private RelativeLayout rlSettings;
+	@ViewInject(R.id.rlLogin3)
+	private RelativeLayout rlLogin3;
 	@ViewInject(R.id.rlExit)
 	private RelativeLayout rlExit;
 	@ViewInject(R.id.tvName_mine)
@@ -162,8 +165,9 @@ public class MineFragment extends Fragment implements ObservableScrollViewCallba
 			case R.id.rlAddress:
 
 				break;
-			case R.id.rlOrder:
-
+			case R.id.rlLogin3:
+				Intent intent3=new Intent(getActivity(), Login3Activity.class);
+				startActivity(intent3);
 				break;
 			case R.id.rlTitle:
 				Log.d("hyl", "onClick:rlTitle ");
@@ -207,13 +211,13 @@ public class MineFragment extends Fragment implements ObservableScrollViewCallba
 		MineOnClick listener = new MineOnClick();
 //		rlShoucang.setOnClickListener(listener);
 //		rlAddress.setOnClickListener(listener);
-//		rlOrder.setOnClickListener(listener);
+		rlLogin3.setOnClickListener(listener);
 //		rlSettings.setOnClickListener(listener);
 //		rlExit.setOnClickListener(listener);
-		rlTitle.setOnClickListener(listener);
-		mOverlayView.setOnClickListener(listener);
+//		rlTitle.setOnClickListener(listener);
+//		mOverlayView.setOnClickListener(listener);
 		llview.setOnClickListener(listener);
-		civTouxiang.setOnClickListener(listener);
+//		civTouxiang.setOnClickListener(listener);
 	}
 
 	public void slide(float v) {
