@@ -17,6 +17,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.nineoldandroids.view.ViewHelper;
 
 import org.xutils.view.annotation.ViewInject;
@@ -91,6 +92,7 @@ public class MineFragment extends Fragment implements ObservableScrollViewCallba
 	private int mFlexibleSpaceShowFabOffset;
 	private int mFlexibleSpaceImageHeight;
 	private int mToolbarColor;
+	private MyApplication app;
 
 
 	@Override
@@ -98,6 +100,7 @@ public class MineFragment extends Fragment implements ObservableScrollViewCallba
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fram_mine, null);
 //		lvGame=(ListView) view.findViewById(R.id.lvMine);
+		app=MyApplication.getApp();
 		setView();
 		x.view().inject(this, view);
 		presneter = new MinePresenter(this);
@@ -228,8 +231,19 @@ public class MineFragment extends Fragment implements ObservableScrollViewCallba
 	public void updateUserInfo() {
 		Log.i("hyl", "updateUserInfo()");
 		User user = MyApplication.getApp().getCurrentUser();
-		String nickname = user.getNickname();
-		tvName.setText(nickname);
+
+		String useiv=app.getUseriv();
+		String usename=app.getUsername();
+		if(usename==null||"".equals(usename)){
+			tvName.setText("请 登 录");
+		}else {
+			tvName.setText(usename);
+		}
+		if(useiv==null||"".equals(useiv)){
+			civTouxiang.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.a011));
+		}else{
+			Glide.with(this).load(useiv).into(civTouxiang);
+		}
 		onScrollChanged(mScrollView.getCurrentScrollY(),true,false);
 	}
 
@@ -293,6 +307,12 @@ public class MineFragment extends Fragment implements ObservableScrollViewCallba
 				ViewHelper.setTranslationY(mToolbar, -scrollY);
 			}
 		}
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		updateUserInfo();
 	}
 
 	@Override

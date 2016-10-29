@@ -11,6 +11,7 @@ import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ import com.baidu.frontia.Frontia;
 import com.baidu.frontia.FrontiaUser;
 import com.baidu.frontia.api.FrontiaAuthorization;
 import com.baidu.frontia.api.FrontiaAuthorizationListener;
+import com.bumptech.glide.Glide;
 import com.mob.tools.utils.UIHandler;
 import com.tencent.connect.UserInfo;
 import com.tencent.connect.common.Constants;
@@ -36,11 +38,13 @@ import java.util.HashMap;
 
 import butterknife.InjectView;
 import butterknife.OnClick;
+import cn.heyl.weituangou.MyApplication;
 import cn.heyl.weituangou.R;
 import cn.heyl.weituangou.example.Util;
 import cn.heyl.weituangou.example.aboutbaidu.AllApk;
 import cn.heyl.weituangou.example.baseactivity.AhView;
 import cn.heyl.weituangou.example.baseactivity.BaseActivity;
+import cn.heyl.weituangou.ui.CircleImageView;
 import cn.sharesdk.framework.Platform;
 import cn.sharesdk.framework.PlatformActionListener;
 import cn.sharesdk.framework.ShareSDK;
@@ -52,6 +56,22 @@ import cn.sharesdk.sina.weibo.SinaWeibo;
  * */
 @AhView(R.layout.activity_login3)
 public class Login3Activity extends BaseActivity implements PlatformActionListener,Handler.Callback {
+    @InjectView(R.id.tvsina)
+     TextView tvSina;
+    @InjectView(R.id.tvweixin)
+     TextView tvWeixin;
+    @InjectView(R.id.tvqq)
+     TextView tvQQ;
+    @InjectView(R.id.tvbaidu)
+     TextView tvBaidu;
+    @InjectView(R.id.civsina)
+     CircleImageView civSina;
+    @InjectView(R.id.civqq)
+     ImageView civQQ;
+    @InjectView(R.id.civbaidu)
+    ImageView civBaidu;
+
+
     @InjectView(R.id.m_third_login_result)
     TextView mThirdLoginResult;
     //----------------------新浪微博授权获取用户信息相关------------------------
@@ -73,9 +93,13 @@ public class Login3Activity extends BaseActivity implements PlatformActionListen
 
     //---------------------------微信第三方相关
     public static IWXAPI api;
+    private String TAG="hyl";
+    private MyApplication app;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        app= MyApplication.getApp();
         regToWx();
         initView();
     }
@@ -205,7 +229,12 @@ public class Login3Activity extends BaseActivity implements PlatformActionListen
                         Log.e("sharesdk use_id", pf.getDb().getUserId()); //获取用户id
                         Log.e("sharesdk use_name", pf.getDb().getUserName());//获取用户名称
                         Log.e("sharesdk use_icon", pf.getDb().getUserIcon());//获取用户头像
+                        tvSina.setText(pf.getDb().getUserName());
+                        Glide.with(this).load(pf.getDb().getUserIcon()).into(civSina);
                         mThirdLoginResult.setText("授权成功"+"\n"+"用户id:" + pf.getDb().getUserId() + "\n" + "获取用户名称" + pf.getDb().getUserName() + "\n" + "获取用户头像" + pf.getDb().getUserIcon());
+                        app.setUseriv(pf.getDb().getUserIcon());
+                        app.setUsername(pf.getDb().getUserName());
+                        finish();
                         //mPf.author()这个方法每一次都会调用授权，出现授权界面
                         //如果要删除授权信息，重新授权
                         //mPf.getDb().removeAccount();
@@ -278,6 +307,9 @@ public class Login3Activity extends BaseActivity implements PlatformActionListen
             public void onSuccess(FrontiaUser result) {
                 if (null != mThirdLoginResult) {
                     mThirdLoginResult.setText("social id: " + result.getId() + "\n" + "token: " + result.getAccessToken() + "\n" + "expired: " + result.getExpiresIn());
+                    Log.d(TAG, "onSuccess: "+result.getName());
+                    app.setUsername(result.getName());
+                    app.setUseriv(null);
                 }
             }
             @Override
@@ -360,6 +392,8 @@ public class Login3Activity extends BaseActivity implements PlatformActionListen
 
         }
     }
+
+
     Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -368,7 +402,14 @@ public class Login3Activity extends BaseActivity implements PlatformActionListen
                 if (response.has("nickname")) {
                     try {
                         log("获取用户信息成功，返回结果："+response.toString());
+                        String name=response.getString("nickname");
+                        String useiv=response.get("figureurl_qq_1")+"";
+                        app.setUsername(name);
+                        app.setUseriv(useiv);
+                        tvQQ.setText(name);
+                        Glide.with(Login3Activity.this).load(useiv).into(civQQ);
                         mThirdLoginResult.setText("登录成功\n"+"昵称:"+response.getString("nickname")+"\n头像地址:"+response.get("figureurl_qq_1"));
+                        finish();
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

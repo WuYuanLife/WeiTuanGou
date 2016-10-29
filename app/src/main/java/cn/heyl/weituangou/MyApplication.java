@@ -37,6 +37,24 @@ public class MyApplication extends FrontiaApplication {
 	private boolean isHaveRecently = false;
 	private LocationClient locationClient;
 	private User user;
+	private String username=null;
+	private String useriv=null;
+
+	public String getUseriv() {
+		return useriv;
+	}
+
+	public void setUseriv(String useriv) {
+		this.useriv = useriv;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
 	public static double getLatitude() {
 		return latitude;
@@ -200,6 +218,8 @@ public class MyApplication extends FrontiaApplication {
 	 */
 	public void saveCurrentUser(User user){
 		this.user = user;
+		username=user.getNickname();
+		useriv=null;
 	}
 
 	public User getCurrentUser(){
