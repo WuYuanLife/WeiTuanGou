@@ -1,9 +1,9 @@
 package cn.heyl.weituangou;
 
-import android.app.Application;
 import android.content.SharedPreferences;
 import android.util.Log;
 
+import com.baidu.frontia.FrontiaApplication;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -26,7 +26,7 @@ import cn.heyl.weituangou.entity.User;
 /**
  * Creaded by heyl 2016-10-8
  */
-public class MyApplication extends Application {
+public class MyApplication extends FrontiaApplication {
 	private static double latitude;
 	private static double longitude;
 	private static MyApplication app;

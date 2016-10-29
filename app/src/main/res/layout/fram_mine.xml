@@ -124,25 +124,25 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/rljilu"
+                android:id="@+id/rlbaidu"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:background="@android:color/white">
 
                 <ImageView
-                    android:id="@+id/ivjilu"
+                    android:id="@+id/ivbaidu"
                     android:layout_width="66dp"
                     android:layout_height="match_parent"
                     android:scaleType="centerInside"
                     android:src="@drawable/mine_ico_shoucang" />
 
                 <TextView
-                    android:id="@+id/tvjilu"
+                    android:id="@+id/tvbaidu"
                     android:layout_width="wrap_content"
                     android:layout_height="49dp"
-                    android:layout_toRightOf="@+id/ivjilu"
+                    android:layout_toRightOf="@+id/ivbaidu"
                     android:gravity="center_vertical"
-                    android:text="我 的 代 金 券"
+                    android:text="百 度 账 号 登 录"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#333"
                     android:textSize="14sp" />
@@ -150,8 +150,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="3dp"
-                    android:layout_alignLeft="@+id/tvjilu"
-                    android:layout_below="@+id/tvjilu"
+                    android:layout_alignLeft="@+id/tvbaidu"
+                    android:layout_below="@+id/tvbaidu"
                     android:orientation="vertical"
                     android:paddingRight="30dp">
 
